@@ -1,6 +1,8 @@
 # CORE - Centralized Operations & Resource Engine
 
-CORE is a lightweight, C++ library that provides essential system utilities, including command execution, system information retrieval, file manipulation, networking helpers, cryptographic utilities and more. Designed to serve as a centralized engine for common operations and resource management, CORE aims to simplify and standardize interactions with the system
+CORE is a lightweight, C++ library that provides essential system utilities, including command execution, system information retrieval, file manipulation, networking helpers, cryptographic utilities and more. Designed to serve as a centralized engine for common operations and resource management, CORE aims to simplify and standardize interactions with the system.
+
+Its primiarly made for Linux, but with plans to make it cross platform
 
 ---
 
@@ -95,6 +97,11 @@ int main() {
 ```
 
 ### System information
-```cpp
 
+for this one it easy for all funciton i this section
+```cpp
+std::string nameofhost = SystemInfo::the_function()
 ```
+
+###
+
