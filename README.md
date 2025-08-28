@@ -103,5 +103,8 @@ for this one it easy for all funciton i this section
 std::string nameofhost = SystemInfo::the_function()
 ```
 
-###
+### File Utils
+foreasier read, write, list dir and file existace check
+```cpp
 
+```
