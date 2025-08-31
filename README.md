@@ -2,7 +2,7 @@
 
 CORE is a lightweight, C++ library that provides essential system utilities, including command execution, system information retrieval, file manipulation, networking helpers, cryptographic utilities and more. Designed to serve as a centralized engine for common operations and resource management, CORE aims to simplify and standardize interactions with the system.
 
-Its primiarly made for Linux, but with plans to make it cross platform
+Its primiarly made for Linux, but with plans to make it cross platform, but soem function are nativly cross platform
 
 ---
 
@@ -47,6 +47,8 @@ or if it is burried in some folders
 Below are examples demonstrating how to use various CORE components.
 
 ### Time/Date function
+will run on Windows, Linux, MacOs and other Unix systems
+
 ```cpp
 #include "CORE.h"
 int main() {
@@ -59,6 +61,8 @@ int main() {
 ```
 
 ### Terminal excute fcuntion
+will run on Linux, Unix like systems and MacOs
+
 **v1**
 
 for basic commands andoutput catching
@@ -97,14 +101,61 @@ int main() {
 ```
 
 ### System information
-
-for this one it easy for all funciton i this section
+runs on Linux, Unix like and MacOs
 ```cpp
 std::string nameofhost = SystemInfo::the_function()
 ```
 
 ### File Utils
 foreasier read, write, list dir and file existace check
-```cpp
+runs on all systems
 
+check existance
+```cpp
+bool exiteance = FileUtil::fileExists("/path/to/your/file");
+```
+read file
+```cpp
+std::string content = FileUtil::readFile("path/to/your/file.txt");
+```
+
+write to a file
+```cpp
+bool success = FileUtil::writeFile("path/to/your/file.txt", "Your content goes here");
+```
+
+listfiles in a directory
+```cpp
+std::vector<std::string> files = FileUtil::listDirectory("path/to/your/directory");
+```
+
+### Hashutils
+runs on all sytems
+
+sha256
+```cpp
+std::srting hash = HashUtils::saha256("Hello world");
+std::cout << hash << "\n";
+```
+
+UUID
+```cpp
+std::string generatedId = HashUtils::generateUUID();
+std::cout << generatedId << "\n";
+```
+
+### NetworkUtils
+get local ip
+```cpp
+std::string localIP = NetUtils::getLocalIPAddress();
+std::cout << "Local IP Address: " << localIP << "\n";
+```
+ping
+```cpp
+std::string host = "google.com";
+if (NetUtils::pingHost(host)) {
+    std::cout << host << " is reachable.\n";
+  } else {
+    std::cout << host << " is not reachable.\n";
+  }
 ```
