@@ -2,7 +2,8 @@
 
 CORE is a lightweight, C++ library that provides essential system utilities, including command execution, system information retrieval, file manipulation, networking helpers, cryptographic utilities and more. Designed to serve as a centralized engine for common operations and resource management, CORE aims to simplify and standardize interactions with the system.
 
-Its primiarly made for Linux, but with plans to make it cross platform, but soem function are nativly cross platform
+Its primiarly made for Linux, but with plans to make it cross platform, but soem function are nativly cross platform.
+
 
 ---
 
@@ -59,6 +60,7 @@ int main() {
   std::cout << "Time: " << currentTime << "\nDate: " << currentDate << "\nTime & Date: " << timeAndDate << "\n";
 }
 ```
+---
 
 ### Terminal excute fcuntion
 will run on Linux, Unix like systems and MacOs
@@ -99,12 +101,14 @@ int main() {
   // in the other types like v1 and v2 th output will vary and display fasle info beause they can only read one output word no 2, 3 or more
 }
 ```
+---
 
 ### System information
 runs on Linux, Unix like and MacOs
 ```cpp
 std::string nameofhost = SystemInfo::the_function()
 ```
+---
 
 ### File Utils
 foreasier read, write, list dir and file existace check
@@ -128,6 +132,7 @@ listfiles in a directory
 ```cpp
 std::vector<std::string> files = FileUtil::listDirectory("path/to/your/directory");
 ```
+---
 
 ### Hashutils
 runs on all sytems
@@ -143,6 +148,7 @@ UUID
 std::string generatedId = HashUtils::generateUUID();
 std::cout << generatedId << "\n";
 ```
+---
 
 ### NetworkUtils
 get local ip
