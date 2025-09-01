@@ -208,3 +208,38 @@ public:
         return std::string(uuidStr);
     }
 };
+
+class Logger {
+public:
+    static void LogWarning(const std::string& message) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Warning] " + message + "\n";
+        std::cout << logmassage;
+    }
+    static void LogWarningFile(const std::string& message, const std::string path) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Warning] " + message;
+        FileUtil::writeFile(logmassage, path);
+    }
+    static void LogError(const std::string& message) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Warning] " + message + "\n";
+        std::cout << logmassage;
+    }
+    static void LogErrorFile(const std::string& message, const std::string path) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Error] " + message;
+        FileUtil::writeFile(logmassage, path);
+    }
+    static void LogInfo(const std::string& message) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Info] " + message + "\n";
+        std::cout << logmassage;
+    }
+    static void LogInfoFile(const std::string& message, const std::string path) {
+        std::string TimeAndDate = TimeDatefunc::getTimeAndDate();
+        std::string logmassage = TimeAndDate + " [Info] " + message;
+        FileUtil::writeFile(logmassage, path);
+    }
+
+};
