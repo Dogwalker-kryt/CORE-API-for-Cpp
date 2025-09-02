@@ -39,7 +39,11 @@ if you put it in your project directory you can call it with
 ```
 or if it is burried in some folders
 ```cpp
-#include "../your_folder_where_its_located/CORE.h"
+#include "your_folder_where_its_located/CORE.h"
+```
+or
+```cpp
+#include "../CORE.h"
 ```
 ---
 
